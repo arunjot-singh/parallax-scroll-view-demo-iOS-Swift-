@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="parallax_scroll_view" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GA3-jl-oXW">
+                                <rect key="frame" x="0.0" y="20" width="600" height="980"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2N1-O4-vNQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="980"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="random.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dub-YQ-U0R">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="224"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="224" id="8yn-te-VOQ"/>
+                                                    <constraint firstAttribute="height" constant="224" id="I3Y-8k-yV4"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="I3Y-8k-yV4"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6p-dq-sCK">
+                                                <rect key="frame" x="282" y="479" width="37" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="37" id="nRK-ZO-4kS"/>
+                                                    <constraint firstAttribute="height" constant="21" id="qD1-eb-5uZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="980" id="3w3-1S-4tx"/>
+                                            <constraint firstItem="dub-YQ-U0R" firstAttribute="leading" secondItem="2N1-O4-vNQ" secondAttribute="leading" id="FlH-US-58b"/>
+                                            <constraint firstItem="l6p-dq-sCK" firstAttribute="top" secondItem="2N1-O4-vNQ" secondAttribute="top" constant="479" id="V8t-m8-Lea"/>
+                                            <constraint firstItem="l6p-dq-sCK" firstAttribute="centerX" secondItem="2N1-O4-vNQ" secondAttribute="centerX" id="Vn5-pN-i91"/>
+                                            <constraint firstAttribute="trailing" secondItem="dub-YQ-U0R" secondAttribute="trailing" id="dSL-Te-gfD"/>
+                                            <constraint firstItem="l6p-dq-sCK" firstAttribute="top" secondItem="dub-YQ-U0R" secondAttribute="bottom" constant="255" id="drA-Xu-onJ"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="980" id="q7J-xz-5bM"/>
+                                            <constraint firstItem="dub-YQ-U0R" firstAttribute="top" relation="lessThanOrEqual" secondItem="2N1-O4-vNQ" secondAttribute="top" id="zyX-pZ-GwR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.80714878609999996" blue="0.172012045" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="2N1-O4-vNQ" firstAttribute="top" secondItem="GA3-jl-oXW" secondAttribute="top" id="3W9-dR-89b"/>
+                                    <constraint firstAttribute="trailing" secondItem="2N1-O4-vNQ" secondAttribute="trailing" id="6IY-6G-iBp"/>
+                                    <constraint firstAttribute="bottom" secondItem="2N1-O4-vNQ" secondAttribute="bottom" id="X7c-Hg-mBg"/>
+                                    <constraint firstItem="2N1-O4-vNQ" firstAttribute="leading" secondItem="GA3-jl-oXW" secondAttribute="leading" id="hqy-Jh-0Jp"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dub-YQ-U0R" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" priority="800" id="7v7-HD-ScN"/>
+                            <constraint firstAttribute="trailing" secondItem="GA3-jl-oXW" secondAttribute="trailing" id="FLg-u7-gDC"/>
+                            <constraint firstItem="2N1-O4-vNQ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="bpR-q3-EWy"/>
+                            <constraint firstItem="GA3-jl-oXW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kHW-Zp-Jgc"/>
+                            <constraint firstItem="GA3-jl-oXW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="w0p-tC-c0W"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GA3-jl-oXW" secondAttribute="bottom" id="zw1-Ii-arr"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="1000"/>
+                    <connections>
+                        <outlet property="scrollView" destination="GA3-jl-oXW" id="weX-K9-Qar"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="387"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="random.jpg" width="1600" height="694"/>
+    </resources>
+</document>
